@@ -4,9 +4,11 @@ import pandas as pd
 st.title("Garmy_Samb_ISE2")
 st.write("TP_dashboard_tuto_streamlit!")
 
-impressions = pd.read_csv('C:\Users\user\Desktop\SEMESTRE2_ISE2\MACHINE LEARNING 2\dashboard_tuto\impressions.csv')
-clics = pd.read_csv('C:\Users\user\Desktop\SEMESTRE2_ISE2\MACHINE LEARNING 2\dashboard_tuto\clics.csv')
-achats = pd.read_csv('C:\Users\user\Desktop\SEMESTRE2_ISE2\MACHINE LEARNING 2\dashboard_tuto\achats.csv')
+impressions = pd.read_csv('C:/Users/user/Desktop/SEMESTRE2_ISE2/MACHINE LEARNING 2/dashboard_tuto/impressions.csv')
+clics = pd.read_csv('C:/Users/user/Desktop/SEMESTRE2_ISE2/MACHINE LEARNING 2/dashboard_tuto/clics.csv')
+
+achats = pd.read_csv('C:/Users/user/Desktop/SEMESTRE2_ISE2/MACHINE LEARNING 2/dashboard_tuto/achats.csv')
+
 
 fusion1 = pd.merge(impression,clics, on ='cookie_id')
 fusion = pd.merge(fusion1,achats, on ='cookie_id')
