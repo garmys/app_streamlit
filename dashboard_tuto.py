@@ -1,18 +1,20 @@
 import streamlit as st
 import pandas as pd
+from flask import Flask
+import plotly.express as px
 
 st.title("Garmy_Samb_ISE2")
 st.write("TP_dashboard_tuto_streamlit!")
 
-impressions = pd.read_csv('C:/Users/user/Desktop/SEMESTRE2_ISE2/MACHINE LEARNING 2/dashboard_tuto/impressions.csv')
+impression = pd.read_csv('impressions.csv')
 clics = pd.read_csv('clics.csv')
 achats = pd.read_csv('achats.csv')
-
 
 fusion1 = pd.merge(impression,clics, on ='cookie_id')
 fusion = pd.merge(fusion1,achats, on ='cookie_id')
 fusion
 
+app = Flask(__name__)
 
 
 @app.route('/api/donnees', methods=['GET'])
