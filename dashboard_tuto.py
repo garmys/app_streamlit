@@ -4,9 +4,9 @@ import pandas as pd
 st.title("Garmy_Samb_ISE2")
 st.write("TP_dashboard_tuto_streamlit!")
 
-impression = pd.read_csv('impressions.csv')
-clics = pd.read_csv('clics.csv')
-achats = pd.read_csv('achats.csv')
+impression = pd.read_csv('impressions')
+clics = pd.read_csv('clics')
+achats = pd.read_csv('achats')
 
 fusion1 = pd.merge(impression,clics, on ='cookie_id')
 fusion = pd.merge(fusion1,achats, on ='cookie_id')
