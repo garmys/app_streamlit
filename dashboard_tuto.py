@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from flask import Flask
 import plotly.express as px
 
 st.title("Garmy_Samb_ISE2")
@@ -14,7 +13,6 @@ fusion1 = pd.merge(impression,clics, on ='cookie_id')
 fusion = pd.merge(fusion1,achats, on ='cookie_id')
 fusion
 
-app = Flask(__name__)
 
 
 @app.route('/api/donnees', methods=['GET'])
